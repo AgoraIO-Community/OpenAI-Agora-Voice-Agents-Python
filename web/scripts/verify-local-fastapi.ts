@@ -126,8 +126,8 @@ async function main() {
     cwd: serverRoot,
     env: {
       ...process.env,
-      AGORA_APP_ID: '0123456789abcdef0123456789abcdef',
-      AGORA_APP_CERTIFICATE: 'fedcba9876543210fedcba9876543210',
+      AGORA_APP_ID: '00000000000000000000000000000000',
+      AGORA_APP_CERTIFICATE: '11111111111111111111111111111111',
       PORT: String(port),
     },
     stdout: 'ignore',

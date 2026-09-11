@@ -46,9 +46,11 @@ jobs:
         run: |
           IMAGE=$(printf '%s\n' "${{ steps.meta.outputs.tags }}" | head -n1)
           echo "Smoke-testing $IMAGE"
+          # Structurally valid test fixtures; never use real credentials in CI.
           docker run -d --name smoke -p 8000:8000 \
-            -e AGORA_APP_ID=0123456789abcdef0123456789abcdef \
-            -e AGORA_APP_CERTIFICATE=fedcba9876543210fedcba9876543210 \
+            -e AGORA_APP_ID=00000000000000000000000000000000 \
+            -e AGORA_APP_CERTIFICATE=11111111111111111111111111111111 \
+            -e OPENAI_API_KEY=test-openai-api-key \
             "$IMAGE"
           set +e
           fail=0

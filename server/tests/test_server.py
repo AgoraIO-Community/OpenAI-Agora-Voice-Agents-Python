@@ -8,7 +8,7 @@ def test_get_config_returns_envelope_and_token(client):
     assert body["code"] == 0
     assert body["msg"] == "success"
     data = body["data"]
-    assert data["app_id"] == "0123456789abcdef0123456789abcdef"
+    assert data["app_id"] == "00000000000000000000000000000000"
     assert isinstance(data["token"], str) and len(data["token"]) > 0
     assert data["uid"] and data["uid"] != "0"
     assert data["channel_name"].startswith("ai-conversation-")

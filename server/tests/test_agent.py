@@ -25,7 +25,7 @@ def test_agent_constructs_with_full_env(fake_env):
     from agora_agent import AsyncAgora
 
     instance = agent.Agent()
-    assert instance.app_id == "0123456789abcdef0123456789abcdef"
+    assert instance.app_id == "00000000000000000000000000000000"
     assert isinstance(instance.client, AsyncAgora)
     assert instance.prior_messages == []
 
