@@ -104,8 +104,7 @@ def test_start_wires_openai_gpt_live_mllm_and_returns_shape(fake_env, monkeypatc
         "greeting_message": agent.DEFAULT_GREETING,
         "messages": [],
         "params": {
-            "model": "gpt-live-1-diamond-alpha",
-            "alpha_selector": "quicksilver=v3",
+            "model": "gpt-live-1",
             "voice": "cedar",
             "prompt": agent.DEFAULT_INSTRUCTIONS,
         },

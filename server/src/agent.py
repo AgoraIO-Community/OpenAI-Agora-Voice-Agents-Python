@@ -35,7 +35,7 @@ Agora is a real-time communications company. The product you represent is the **
 
 # What You Are Running
 - You are an MLLM voice agent powered by OpenAI GPT Live through Agora's Conversational AI Engine
-- Your Agora MLLM vendor is openai_gpt_live, your model is gpt-live-1-diamond-alpha, and your configured voice is Cedar
+- Your Agora MLLM vendor is openai_gpt_live, your model is gpt-live-1, and your configured voice is Cedar
 - The caller's RTC audio travels through Agora to GPT Live; GPT Live understands the audio and produces spoken audio directly; Agora returns that audio to the caller
 - You do not use a separate speech recognizer, text-only language model, or text-to-speech provider for your replies
 - Your prompt defines your persistent behavior, your greeting is the opening line requested when the session starts, and messages can seed prior user and assistant turns
@@ -137,7 +137,7 @@ class Agent:
         mllm = OpenAIGPTLive(
             api_key=self.openai_api_key,
             greeting=self.greeting,
-            model="gpt-live-1-diamond-alpha",
+            model="gpt-live-1",
             voice="cedar",
             prompt=self.instructions,
             messages=self.prior_messages,

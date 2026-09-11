@@ -4,9 +4,9 @@ Use Agora's Python SDK to place an OpenAI GPT Live voice agent in an Agora chann
 
 | Item | Value |
 | --- | --- |
-| SDK | `agora-agents==2.8.0` |
+| SDK | `agora-agents==2.8.1` |
 | Provider | `openai_gpt_live` |
-| Model | `gpt-live-1-diamond-alpha` |
+| Model | `gpt-live-1` |
 | Voice | `cedar` |
 | Backend | Python and FastAPI |
 | Web client | Next.js |
@@ -81,7 +81,7 @@ async def start_agent(channel: str, agent_uid: str, user_uid: str):
     ).with_mllm(
         OpenAIGPTLive(
             api_key=os.environ["OPENAI_API_KEY"],
-            model="gpt-live-1-diamond-alpha",
+            model="gpt-live-1",
             voice="cedar",
             prompt="You are a concise and helpful voice assistant.",
             greeting="Hello! How can I help?",
