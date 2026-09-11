@@ -23,14 +23,23 @@ Install dependencies and create `server/.env.local`:
 bun run setup
 ```
 
-Add your credentials to `server/.env.local`:
+Install the [Agora CLI](https://github.com/AgoraIO/cli), sign in, select your Agora project, and write its App ID and App Certificate to the environment file:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/AgoraIO/cli/main/install.sh | sh -s -- --add-to-path
+agora login
+agora project use <your-project-name-or-id>
+agora project env write server/.env.local --template standard
+```
+
+The CLI configures `AGORA_APP_ID` and `AGORA_APP_CERTIFICATE`. Add your OpenAI key to `server/.env.local`:
 
 ```dotenv
-AGORA_APP_ID=your_agora_app_id
-AGORA_APP_CERTIFICATE=your_agora_app_certificate
 OPENAI_API_KEY=your_openai_api_key
 PORT=8000
 ```
+
+If you prefer to configure the file manually, also set `AGORA_APP_ID` and `AGORA_APP_CERTIFICATE` in `server/.env.local`.
 
 Start the backend and web client:
 
