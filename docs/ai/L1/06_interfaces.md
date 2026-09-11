@@ -117,6 +117,6 @@ agent_id = await session.start()
 
 ### GPT Live v3 model contract
 
-The application sets `params.model: gpt-live-1-diamond-alpha`, `params.voice: cedar`, and `params.prompt` from `AGENT_INSTRUCTIONS`. Without an override, the prompt and greeting use the built-in Ada developer advocate persona. The SDK supplies `/v1/live/sessions` and its protocol selector default. Browser API contracts are unchanged.
+The application sets `params.model: gpt-live-1`, `params.voice: cedar`, and `params.prompt` from `AGENT_INSTRUCTIONS`. Without an override, the prompt and greeting use the built-in Ada developer advocate persona. The SDK supplies `/v1/live/sessions` and omits `params.alpha_selector` unless explicitly configured. Browser API contracts are unchanged.
 
 `AGENT_PRIOR_MESSAGES` is parsed as a JSON array of user/assistant text turns and sent as `mllm.messages`. It is independent of `AGENT_INSTRUCTIONS`; invalid history prevents backend startup.

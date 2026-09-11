@@ -2,18 +2,18 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue)](https://www.python.org/)
-[![Agora Agents](https://img.shields.io/badge/agora--agents-2.8.0-099DFD)](https://pypi.org/project/agora-agents/2.8.0/)
+[![Agora Agents](https://img.shields.io/badge/agora--agents-2.8.1-099DFD)](https://pypi.org/project/agora-agents/2.8.1/)
 
 Build a browser-based voice agent with OpenAI GPT Live and the Agora Conversational AI Engine. A FastAPI backend starts and stops the agent, while a Next.js client handles microphone audio, playback, live transcripts, state, and latency metrics.
 
-The sample uses the published `agora-agents` 2.8.0 package and configures GPT Live as one end-to-end multimodal stage.
+The sample uses the published `agora-agents` 2.8.1 package and configures GPT Live as one end-to-end multimodal stage.
 
 ## Prerequisites
 
 - Python 3.10 or newer
 - [Bun](https://bun.sh/)
 - An Agora project with App ID and App Certificate
-- An OpenAI API key with access to `gpt-live-1-diamond-alpha`
+- An OpenAI API key with access to `gpt-live-1`
 
 ## Run locally
 

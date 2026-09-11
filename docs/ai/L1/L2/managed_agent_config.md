@@ -13,7 +13,7 @@ self.client = AsyncAgora(
 
 mllm = OpenAIGPTLive(
     api_key=self.openai_api_key,
-    model="gpt-live-1-diamond-alpha",
+    model="gpt-live-1",
     voice="cedar",
     prompt=self.instructions,
     greeting=self.greeting,

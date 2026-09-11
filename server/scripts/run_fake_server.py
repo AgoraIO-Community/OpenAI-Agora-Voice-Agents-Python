@@ -32,11 +32,14 @@ def main():
     if src_root not in sys.path:
         sys.path.insert(0, src_root)
 
+    # Preserve the smoke-test port before importing the app, whose local dotenv
+    # loading may replace PORT with the developer server's configured value.
+    port = int(os.getenv("PORT", "8000"))
+
     import server as server_module
 
     server_module.agent = FakeAgent()
 
-    port = int(os.getenv("PORT", "8000"))
     uvicorn.run(server_module.app, host="127.0.0.1", port=port)
 
 

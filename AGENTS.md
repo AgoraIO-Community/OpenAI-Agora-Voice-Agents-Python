@@ -25,7 +25,7 @@ The sections below (Start Here, Patterns, Anti-Patterns, etc.) remain the canoni
 - Backend: Python FastAPI in `server`
 - Web API facade: Next rewrites in `web/next.config.ts`
 - Auth: Token007 generated from `AGORA_APP_ID` and `AGORA_APP_CERTIFICATE`
-- Default agent config: OpenAI GPT Live v3 MLLM (`gpt-live-1-diamond-alpha`, voice `cedar`), using the local OpenAI preview SDK
+- Default agent config: OpenAI GPT Live v3 MLLM (`gpt-live-1`, voice `cedar`), using `agora-agents` 2.8.1
 - Optional `AGENT_PRIOR_MESSAGES` seeds user/assistant history separately from `AGENT_INSTRUCTIONS`.
 
 ## Supported Modes
