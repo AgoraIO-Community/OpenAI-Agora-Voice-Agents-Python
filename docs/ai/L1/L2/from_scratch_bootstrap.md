@@ -81,7 +81,7 @@ bun run verify:web
 bun run verify:local
 ```
 
-`verify:web:build` may need network access if `next/font` fetches Google Fonts during build.
+`verify:web:build` uses the local system font stack, so the production build does not depend on downloading a web font.
 
 ## See Also
 

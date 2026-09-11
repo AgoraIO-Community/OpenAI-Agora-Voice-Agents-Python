@@ -14,7 +14,6 @@ self.client = AsyncAgora(
 mllm = OpenAIGPTLive(
     api_key=self.openai_api_key,
     model="gpt-live-1-diamond-alpha",
-    alpha_selector="quicksilver=v3",
     voice="cedar",
     prompt=self.instructions,
     greeting=self.greeting,
@@ -32,7 +31,7 @@ agora_agent = AgoraAgent(
 ).with_mllm(mllm)
 ```
 
-`OpenAIGPTLive` emits `mllm.vendor: "openai_gpt_live"`, `wss://api.openai.com/v1/live/sessions`, `params.alpha_selector: "quicksilver=v3"`, and `greeting_message` for the opening line. The selector makes the required v3 OpenAI alpha handshake explicit. Do not add `.with_stt()`, `.with_llm()`, or `.with_tts()` to this demo.
+`OpenAIGPTLive` emits `mllm.vendor: "openai_gpt_live"`, `wss://api.openai.com/v1/live/sessions`, and `greeting_message` for the opening line. Do not add `.with_stt()`, `.with_llm()`, or `.with_tts()` to this demo.
 
 Required server environment:
 

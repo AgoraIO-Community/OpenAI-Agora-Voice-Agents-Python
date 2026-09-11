@@ -138,7 +138,6 @@ class Agent:
             api_key=self.openai_api_key,
             greeting=self.greeting,
             model="gpt-live-1-diamond-alpha",
-            alpha_selector="quicksilver=v3",
             voice="cedar",
             prompt=self.instructions,
             messages=self.prior_messages,

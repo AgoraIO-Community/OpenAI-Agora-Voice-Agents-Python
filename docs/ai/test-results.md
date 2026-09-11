@@ -86,4 +86,4 @@ Retested: 2026-05-28
 | `bun run verify:backend` | Pass | Required escalation because Python bytecode cache writes outside sandbox roots. |
 | `bun run verify:web:api` | Pass | API contract checks passed. |
 | `bun run verify:web:proxy` | Pass | Initial sandbox run could not bind local ports; rerun with escalation passed. |
-| `bun run verify:web` | Blocked | Doctor and API checks passed after `bun install`; `next build` failed because restricted network could not fetch Google Fonts for `next/font`. |
+| `bun run verify:web` | Pass | Doctor, API contract checks, and the webpack production build passed with the local system font stack. |
